@@ -18,7 +18,8 @@
     "lint:eslint": "eslint 'packages/*/{src,test}/**/*.ts'",
     "lint:fix": "prettier --write 'packages/*/{src,test}/**/*.{ts,tsx}' && eslint --fix 'packages/*/{src,test}/**/*.ts'",
     "format:fix": "lerna run format:fix",
-    "deploy": "run-s deploy:docs build deploy:apps && gh-pages -d docs",
+    //"deploy": "run-s deploy:docs build deploy:apps && gh-pages -d docs",
+    "deploy": "run-s deploy:docs build deploy:apps && gh-pages -d docs ../../build/web/ --repo https://github.com/husainnatha/metalplex",
     "deploy:docs": "lerna run docs",
     "deploy:apps": "lerna run deploy:app",
     "test": "lerna run test --concurrency 1 --stream"
